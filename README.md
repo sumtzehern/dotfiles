@@ -1,4 +1,4 @@
-#Managing Dotfiles
+# Managing Dotfiles
 
 Dotfiles are configuration files for various programs, often starting with a dot (e.g., `.vimrc`, `.bashrc`). Managing these files in a systematic way can help streamline customization across different machines.
 
@@ -23,6 +23,7 @@ Create a folder to store your dotfiles. For example, let's call it `dotfiles`.
 ```bash
 mkdir ~/dotfiles
 cd ~/dotfiles
+```
 
 
 ## 2. Clone Dotfiles Repository
@@ -32,10 +33,20 @@ Clone a dotfiles repository from GitHub (or any other version control system) to
 ```bash
 git clone https://github.com/your-username/dotfiles.git
 cd dotfiles
+```
 
 ## 3. Move Existing Dotfiles
 
-Move your existing dotfiles into this folder. Replace username with your actual username.
+Move your existing dotfiles into this folder.
+
+Some other examples of tools that can be configured through dotfiles are:
+
+- bash - ~/.bashrc, ~/.bash_profile
+- git - ~/.gitconfig
+- vim - ~/.vimrc and the ~/.vim folder
+- ssh - ~/.ssh/config
+- tmux - ~/.tmux.conf
+
 
 ```bash
 mv ~/.bashrc ~/dotfiles/bashrc
@@ -45,6 +56,7 @@ mv ~/.vimrc ~/dotfiles/.vimrc
 mv ~/.vim ~/dotfiles/.vim
 mv ~/.ssh/config ~/dotfiles/ssh_config
 mv ~/.tmux.conf ~/dotfiles/.tmux.conf
+```
 
 ## 4. Create Symbolic Links 
 
@@ -58,6 +70,7 @@ ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.vim ~/.vim
 ln -s ~/dotfiles/ssh_config ~/.ssh/config
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+```
 
 ## 5. Make Hidden Files Visible
 
@@ -65,6 +78,7 @@ If needed, make hidden files visible in your file manager or terminal using the 
 
 ```bash
 ls -a
+```
 
 
 Now, your dotfiles are organized, version-controlled, and easily transferable to new machines. This setup allows for quick customization and consistency across different environments.
